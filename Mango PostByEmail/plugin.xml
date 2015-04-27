@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="com.asfusion.mango.postByEmail" name="Post By Email" version="1.0" provider-name="AsFusion" 
+class="postByEmail.Handler">
+
+<description><![CDATA[Checks an email account and makes a post based on the email and email author]]>
+</description>
+
+  <requiresVersion match="greaterOrEqual">1.3</requiresVersion>
+  
+  <listens>
+  	<event name="postByEmail-checkMail" type="asynch" priority="5" />
+  </listens>
+  
+  <listensAdmin>
+	<event name="settingsNav" type="synch" priority="5" />
+  	<event name="showPostByEmailSettings" type="synch" priority="5" />
+	<event name="runScheduledTask" type="synch" priority="5" />
+  </listensAdmin>
+  
+</plugin>
